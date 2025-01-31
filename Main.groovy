@@ -1,6 +1,4 @@
 pipeline {
-    agent { label 'WIN10' }
-
     stages {
         stage('Build') {
             steps {
