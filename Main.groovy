@@ -6,7 +6,8 @@ pipeline {
             steps {
                 script {
                     // 简单输出确认任务正在执行
-                    echo "Hello from WIN10 node!"
+                    def result = bat(script: 'echo Hello World', returnStdout: true).trim()
+                    echo "Command output: ${result}"    
                 }
             }
         }
