@@ -2,12 +2,11 @@ pipeline {
     agent { label 'WIN10' }
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
                 script {
-                    // 使用 bat 步骤执行 Windows 命令
-                    def result = bat(script: 'dir', returnStdout: true).trim()
-                    echo "Command output: ${result}"         
+                    // 简单输出确认任务正在执行
+                    echo "Hello from WIN10 node!"
                 }
             }
         }
