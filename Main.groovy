@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'WIN10' }
 
     stages {
         stage('Hello') {
