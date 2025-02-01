@@ -6,8 +6,8 @@ pipeline {
             steps {
                 script {
                     // 简单输出确认任务正在执行
-                    def result = bat(script: 'echo Hello World', returnStdout: true).trim()
-                    echo "Command output: ${result}"    
+                    def output = sh(script: "ssh 12775@172.22.64.1 'dir'", returnStdout: true).trim()
+                    echo "Command output: ${output}"
                 }
             }
         }
